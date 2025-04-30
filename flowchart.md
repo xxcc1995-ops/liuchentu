@@ -1,12 +1,15 @@
+
+
+```mermaid
 flowchart LR
-    Title[Logic Flow] --> A
-    A[Inputs | Weapon Type: Light/Heavy | Terrain: Options | Weather: Options | Day/Night | Damage: Head/Tracks] --> B
-    subgraph Process
-        B[Base Speed | Light: Terrain+Day/Night | Heavy: Max Speed+Terrain] --> C
-        C[Factors | Terrain Factor | Weather Factor | Day/Night Factor | Damage Factor] --> D
-        D[Calculation | Speed = Base Speed x Factors]
+    Title[简要判定逻辑] --> A
+    A[输入条件 | 武器类型: 轻/重武器 | 地形: 多种选项 | 天气: 多种选项 | 昼夜: 白天/夜晚 | 毁伤部位: 头部/履带等] --> B
+    subgraph 判定流程
+        B[基础速度计算 | 轻武器: 地形+昼夜 | 重武器: 最高速度+地形] --> C
+        C[系数计算 | 地形系数 | 天气系数 | 昼夜系数 | 毁伤系数] --> D
+        D[综合计算 | 实际速度 = 基础速度 x 各系数]
     end
-    D --> E[Output | Speed (km/h)]
+    D --> E[输出 | 实际机动速度 (km/h)]
     style Title fill:#FF0000,stroke:#000000,color:#FFFFFF
     style A fill:#00FF00,stroke:#000000
     style B fill:#00FF00,stroke:#000000
