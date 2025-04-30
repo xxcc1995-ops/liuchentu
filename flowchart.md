@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     %% 标题（模拟标题框）
     Title[简要判定逻辑] --> A
